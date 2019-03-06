@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   fetchData(value) {
-    fetch(`http://api.tvmaze.com/search/shows?q=${value}`)
+    fetch(`https://api.tvmaze.com/search/shows?q=${value}`)
       .then(res => res.json())
       .then(json => this.setState({ search: value, selectedSearchResult: null, searchResults: json }))
       .catch(err => console.log(err))

@@ -21,7 +21,7 @@ class CastList extends Component {
     }
 
     search(value) {
-        fetch(`http://api.tvmaze.com/shows/${value}/cast`)
+        fetch(`https://api.tvmaze.com/shows/${value}/cast`)
           .then(res => res.json())
           .then(json => this.setState({ searchResultsCast: json }))
           .catch(err => console.log(err))

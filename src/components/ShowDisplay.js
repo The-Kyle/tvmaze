@@ -16,7 +16,7 @@ class ShowDisplay extends Component {
     }
 
     fetchCast(value) {
-        fetch(`http://api.tvmaze.com/search/shows/${this.props.show.id}/cast`) //originally, ${value}
+        fetch(`https://api.tvmaze.com/search/shows/${this.props.show.id}/cast`) //originally, ${value}
           .then(res => res.json())
           .then(json => this.setState({ searchResultsCast: json }))
           .catch(err => console.log(err))
